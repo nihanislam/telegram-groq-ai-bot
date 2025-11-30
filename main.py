@@ -15,7 +15,7 @@ groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 conversation_history = {}
 
 # System prompt with developer information
-SYSTEM_PROMPT = """You are a helpful AI assistant created for Telegram. Your developer is Abir, who created you using Groq API. 
+SYSTEM_PROMPT = """You are a helpful AI assistant created Developed by Abir.So, Your developer is Abir, who created you using her curious mind. 
 You are friendly, helpful, and remember that Abir is your creator. When Abir talks to you, acknowledge him as your developer.
 Keep responses concise and helpful."""
 
@@ -24,7 +24,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     await update.message.reply_text(
         f"Hi {user.first_name}! 👋\n\n"
-        f"I'm an AI assistant powered by Groq API, created by Abir.\n"
+        f"I'm an AI assistant Developed by Abir. Who created me using her curious mind\n"
         f"Ask me anything and I'll do my best to help!\n\n"
         f"Commands:\n"
         f"/start - Start the bot\n"
@@ -42,13 +42,13 @@ async def clear_history(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send a message when the command /help is issued."""
     await update.message.reply_text(
-        "🤖 AI Chatbot Help\n\n"
-        "Just send me any message and I'll respond using Groq AI!\n\n"
+        "AI Chatbot Help\n\n"
+        "Just send me any message and I'll respond using AI!\n\n"
         "Commands:\n"
         "/start - Start the bot\n"
         "/clear - Clear conversation history\n"
         "/help - Show this message\n\n"
-        "Created by Abir 💙"
+        "Developed by Abir 💙"
     )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
