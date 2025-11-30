@@ -24,7 +24,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     await update.message.reply_text(
         f"Hi {user.first_name}! 👋\n\n"
-        f"I'm an AI assistant Developed by Abir. Who created me using her curious mind\n"
+        f"I'm an AI assistant Developed by Abir. Who created me using her curious mind. So, respect her work\n"
         f"Ask me anything and I'll do my best to help!\n\n"
         f"Commands:\n"
         f"/start - Start the bot\n"
