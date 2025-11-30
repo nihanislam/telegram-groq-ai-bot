@@ -4,13 +4,6 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from groq import Groq
 
-from start_banner import register_start_handlers
-
-app = Application.builder().token(TOKEN).build()
-# register other handlers...
-register_start_handlers(app)
-app.run_polling()
-
 # Configure logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
